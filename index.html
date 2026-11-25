@@ -8,11 +8,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<canvas id="fx"></canvas>
+<div class="aurora"><i></i><i></i><i></i></div>
+<div id="glow"></div>
 <header class="nav">
   <a class="brand" href="#top">AE</a>
   <nav>
     <a href="#work" data-en="Work" data-ar="الأعمال"></a>
-    <a href="#demos" data-en="Demos" data-ar="الديمو"></a>
     <a href="#skills" data-en="Skills" data-ar="المهارات"></a>
     <a href="#contact" data-en="Contact" data-ar="تواصل"></a>
   </nav>
@@ -21,44 +23,61 @@
     <button id="theme" type="button" aria-label="Theme">◐</button>
   </div>
 </header>
-
 <main id="top">
 <section class="hero">
-  <p class="eyebrow" data-en="Senior Flutter Developer" data-ar="مطور Flutter أول"></p>
-  <h1 data-en="I build mobile apps that ship and keep working." data-ar="بعمل تطبيقات موبايل بتتنشر وتفضل شغالة."></h1>
-  <p class="lead" data-en="Ahmed Elelemy. 6+ years of Flutter. Clean Architecture, Bloc and Riverpod, Firebase, CI/CD. Based in Egypt, open to the Gulf."
-     data-ar="أحمد العليمي. أكتر من 6 سنين Flutter. Clean Architecture وBloc وRiverpod وFirebase وCI/CD. في مصر ومتاح للخليج."></p>
-  <div class="cta">
-    <a class="btn primary" href="#demos" data-en="See the demos" data-ar="شوف الديمو"></a>
-    <a class="btn" href="#contact" data-en="Get in touch" data-ar="تواصل معايا"></a>
+  <div>
+    <span class="pill"><b></b><span data-en="Open to new roles, Egypt and the Gulf" data-ar="متاح لفرص جديدة، مصر والخليج"></span></span>
+    <h1 id="h1" data-en="I build mobile apps that *ship* and keep working." data-ar="بعمل تطبيقات موبايل *بتتنشر* وتفضل شغالة."></h1>
+    <p class="lead" data-en="Ahmed Elelemy, Senior Flutter Developer. 6+ years of Flutter, Clean Architecture, Bloc and Riverpod, Firebase and CI/CD." data-ar="أحمد العليمي، مطور Flutter أول. أكتر من 6 سنين Flutter وClean Architecture وBloc وRiverpod وFirebase وCI/CD."></p>
+    <div class="cta">
+      <a class="btn primary" href="#work" data-en="See my work" data-ar="شوف شغلي"></a>
+      <a class="btn" href="#contact" data-en="Get in touch" data-ar="تواصل معايا"></a>
+      <button class="btn" type="button" id="askbtn" data-en="Ask my bot" data-ar="اسأل البوت"></button>
+    </div>
+    <div class="stats">
+      <div><b data-n="6" data-s="+">0</b><span data-en="Years of Flutter" data-ar="سنين Flutter"></span></div>
+      <div><b data-n="4">0</b><span data-en="Projects shown" data-ar="مشاريع معروضة"></span></div>
+      <div><b data-n="1" data-s="M+">0</b><span data-en="4swapp downloads" data-ar="تحميلات 4swapp"></span></div>
+    </div>
   </div>
+  <div class="stage" id="stage">
+    <div class="phone" id="phone"><div class="scr"><video src="drbooking.mp4" autoplay muted loop playsinline preload="auto"></video></div></div>
+    <div class="chip c1"><i>💙</i>Flutter</div>
+    <div class="chip c2"><i>🧱</i>Clean Architecture</div>
+    <div class="chip c3"><i>🚀</i>CI/CD</div>
+    <div class="chip c4"><i>🔥</i>Firebase</div>
+  </div>
+  <div class="scroll"></div>
 </section>
 
+<div class="marq"><div><span>Flutter</span><span>Dart</span><span>Riverpod</span><span>Bloc</span><span>Clean Architecture</span><span>Firebase</span><span>REST</span><span>GraphQL</span><span>GitHub Actions</span><span>Fastlane</span><span>Arabic RTL</span><span>Flutter</span><span>Dart</span><span>Riverpod</span><span>Bloc</span><span>Clean Architecture</span><span>Firebase</span><span>REST</span><span>GraphQL</span><span>GitHub Actions</span><span>Fastlane</span><span>Arabic RTL</span></div></div>
+
 <section id="work">
-  <h2 data-en="Work" data-ar="الأعمال"></h2>
+  <h2 class="rv" data-en="Selected work" data-ar="شغل مختار"></h2>
+  <p class="sub rv" data-en="Each demo opens in a new tab with a video and the details of what I built." data-ar="كل ديمو بيفتح في تاب جديدة فيها فيديو وتفاصيل اللي عملته."></p>
   <div class="grid">
-    <article class="card">
+    <article class="card rv">
       <span class="tag" data-en="Product" data-ar="منتج"></span>
       <h3>Dr booking</h3>
-      <p data-en="Clinic booking platform for Egypt. Patient website and mobile app in Arabic RTL, clinic staff dashboard, super admin console and API. Each clinic is configured separately." data-ar="منصة حجز عيادات لمصر. موقع وتطبيق للمريض بالعربي RTL، داشبورد للعيادة، كونسول للأدمن وAPI. كل عيادة بتتظبط لوحدها."></p>
+      <p data-en="Clinic booking platform for Egypt. Patient mobile app and website in Arabic RTL, clinic dashboard, admin console and API." data-ar="منصة حجز عيادات لمصر. تطبيق وموقع للمريض بالعربي RTL، داشبورد للعيادة، كونسول للأدمن وAPI."></p>
       <p class="stack">Flutter · Flutter Web · API · Postgres</p>
-      <div class="links"><a href="#demos" data-demo="drbooking" data-en="Demo" data-ar="ديمو"></a><a href="https://github.com/AhmedElemey" target="_blank" rel="noopener">GitHub</a></div>
+      <div class="links"><a class="demo" href="app.html?a=drbooking" target="_blank" rel="noopener" data-en="Demo" data-ar="ديمو"></a></div>
     </article>
-    <article class="card">
+    <article class="card rv">
       <span class="tag" data-en="Pre-launch" data-ar="قبل الإطلاق"></span>
       <h3>xStore</h3>
-      <p data-en="Local marketplace app that connects sellers and buyers with delivery. Shops and individuals can sell. Not on the stores yet." data-ar="تطبيق سوق محلي بيربط البايعين بالمشترين مع توصيل. المحلات والأفراد يقدروا يبيعوا. لسه مش على الاستورز."></p>
-      <p class="stack">Flutter · Android</p>
-      <div class="links"><a href="#demos" data-demo="xstore" data-en="Demo" data-ar="ديمو"></a></div>
+      <p data-en="Local marketplace that connects sellers and buyers with delivery. Shops and individuals can sell." data-ar="سوق محلي بيربط البايعين بالمشترين مع توصيل. المحلات والأفراد يقدروا يبيعوا."></p>
+      <p class="stack">Flutter · Riverpod · Firebase</p>
+      <div class="links"><a class="demo" href="app.html?a=xstore" target="_blank" rel="noopener" data-en="Demo" data-ar="ديمو"></a></div>
     </article>
-    <article class="card">
+    <article class="card rv">
       <span class="tag" data-en="Published app" data-ar="تطبيق منشور"></span>
-      <h3>4swapp</h3>
-      <p data-en="Built the app from scratch. Led the unified analytics event service (Google Analytics, AppsFlyer, TikTok, Facebook Pixel, Amplitude) and refactored the offers module so offer actions sync across screens." data-ar="بنيت التطبيق من الصفر. قدت خدمة الـ analytics الموحدة (Google Analytics وAppsFlyer وTikTok وFacebook Pixel وAmplitude) وعملت refactor لموديول العروض فتتزامن الأكشنز بين الشاشات."></p>
+      <h3>4Swapp</h3>
+      <p data-en="Swapping and trading marketplace on Google Play. I built the app from scratch and led its unified analytics service." data-ar="سوق مقايضة على Google Play. بنيت التطبيق من الصفر وقدت خدمة الـ analytics الموحدة."></p>
       <p class="stack">Flutter · Clean Architecture · Analytics</p>
-      <div class="links"><a href="#demos" data-demo="swapp" data-en="Demo" data-ar="ديمو"></a></div>
+      <div class="links"><a class="demo" href="app.html?a=swapp" target="_blank" rel="noopener" data-en="Demo" data-ar="ديمو"></a></div>
     </article>
-    <article class="card">
+    <article class="card rv">
       <span class="tag" data-en="Content" data-ar="محتوى"></span>
       <h3 data-en="Muslim and Sundus" data-ar="حكايات مسلم وسندس"></h3>
       <p data-en="Short Islamic kids' cartoon series in Egyptian Arabic, made with AI tools and published on TikTok and YouTube Shorts." data-ar="سلسلة كرتون إسلامي قصيرة للأطفال بالعامية المصرية، معمولة بأدوات ذكاء اصطناعي ومنشورة على تيك توك ويوتيوب شورتس."></p>
@@ -68,42 +87,25 @@
   </div>
 </section>
 
-<section id="demos">
-  <h2 data-en="App demos" data-ar="ديمو التطبيقات"></h2>
-  <p class="note" data-en="Screens are illustrative mock-ups with fake data. Dr booking also has a live test environment." data-ar="الشاشات نماذج توضيحية ببيانات وهمية. Dr booking ليه كمان بيئة اختبار شغالة."></p>
-  <div class="tabs" role="tablist">
-    <button type="button" class="tab on" data-app="drbooking">Dr booking</button>
-    <button type="button" class="tab" data-app="xstore">xStore</button>
-    <button type="button" class="tab" data-app="swapp">4swapp</button>
-  </div>
-  <div class="demo">
-    <div class="phone"><div class="screen" id="screen"></div></div>
-    <div class="side">
-      <h3 id="d-title"></h3>
-      <p id="d-text"></p>
-      <div class="steps" id="steps"></div>
-      <div class="links" id="d-links"></div>
-    </div>
-  </div>
-</section>
-
 <section id="skills">
-  <h2 data-en="Skills" data-ar="المهارات"></h2>
-  <ul class="chips">
+  <h2 class="rv" data-en="Skills" data-ar="المهارات"></h2>
+  <ul class="chips rv">
     <li>Flutter</li><li>Dart</li><li>Clean Architecture</li><li>Bloc</li><li>Riverpod</li><li>Provider</li><li>REST</li><li>GraphQL</li><li>Firebase</li><li>CI/CD (GitHub Actions, Fastlane)</li><li>Unit and widget tests</li><li>Figma to UI</li><li>Arabic RTL</li><li>React Native</li><li>Google Play, App Store, AppGallery</li>
   </ul>
-  <p class="note" data-en="B.Sc. Computer Science and IT, Menoufia University. Started mobile development in 2016 with Google and MCIT's Mobile Application Launchpad." data-ar="بكالوريوس حاسبات ومعلومات، جامعة المنوفية. بدأت موبايل ديف سنة 2016 مع Google وMobile Application Launchpad من MCIT."></p>
+  <p class="note rv" data-en="B.Sc. Computer Science and IT, Menoufia University. Started mobile development in 2016 with Google and MCIT's Mobile Application Launchpad." data-ar="بكالوريوس حاسبات ومعلومات، جامعة المنوفية. بدأت موبايل ديف سنة 2016 مع Google وMobile Application Launchpad من MCIT."></p>
 </section>
 
 <section id="contact">
-  <h2 data-en="Contact" data-ar="تواصل"></h2>
-  <div class="links big">
+  <h2 class="rv" data-en="Let's talk" data-ar="خلينا نتكلم"></h2>
+  <div class="links big rv">
     <a href="mailto:ahmedtahaelelemy@gmail.com">ahmedtahaelelemy@gmail.com</a>
     <a href="https://github.com/AhmedElemey" target="_blank" rel="noopener">github.com/AhmedElemey</a>
   </div>
 </section>
 </main>
 <footer>© 2026 Ahmed Elelemy</footer>
-<script src="app.js"></script>
+<script src="vid.js"></script>
+<script src="site.js"></script>
+<script src="home.js"></script>
 </body>
 </html>
