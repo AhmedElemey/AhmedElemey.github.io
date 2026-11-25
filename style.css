@@ -102,3 +102,4 @@ footer{text-align:center;padding:40px;color:var(--mut);font-size:14px}
 .icon{width:84px;height:84px;border-radius:20px;border:1px solid var(--line)}
 @media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:100px}.stage{height:560px}.nav nav{display:none}.dgrid{grid-template-columns:1fr}.chip.c2{right:0}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}h1 .w,.rv{opacity:1;transform:none;filter:none}}
+.grp{margin:34px 0 14px;font-size:1.05rem;opacity:.85}
